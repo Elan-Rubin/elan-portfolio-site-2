@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elanrubin.com - mobile</title>
+    <link rel="icon" type="image/x-icon" href="/images/star_favicon.png">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        html {
+            font-size: 1rem; /* 16px */
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding-top: 5rem; /* 80px */
+        }
+    
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 1.25rem; /* 20px */
+            text-align: center;
+            z-index: 1000;
+        }
+    
+        /* Main content styles */
+        .container {
+            max-width: 75rem; /* 1200px */
+            margin: 0 auto;
+            padding: 1.25rem; /* 20px */
+        }
+    
+        /* About section styles */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem; /* 40px */
+            margin-bottom: 2.5rem; /* 40px */
+        }
+    
+        .profile-img {
+            flex: 1;
+            min-width: 12.5rem; /* 200px */
+            max-width: 10rem;
+        }
+    
+        .profile-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.625rem; /* 10px */
+        }
+    
+        .info {
+            flex: 2;
+            min-width: 18.75rem; /* 300px */
+        }
+    
+        /* Contact buttons styles */
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem; /* 20px */
+            margin-bottom: 2.5rem; /* 40px */
+        }
+    
+        .contact-buttons button {
+            padding: 0.625rem 1.25rem; /* 10px 20px */
+            border: none;
+            border-radius: 0.3125rem; /* 5px */
+            cursor: pointer;
+        }
+    
+        /* Portfolio grid styles */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr)); /* min-width 250px */
+            gap: 2.5rem; /* 40px */
+        }
+    
+        .portfolio-item {
+            border: 0.0625rem solid #ddd; /* 1px */
+            border-radius: 0.625rem; /* 10px */
+            overflow: hidden;
+        }
+    
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+        }
+    
+        .portfolio-item-info {
+            padding: 1.25rem; /* 20px */
+        }
+    
+        /* Responsive adjustments */
+        @media (max-width: 48rem) { /* 768px */
+            html {
+                font-size: 0.875rem; /* 14px */
+            }
+    
+            .about {
+                flex-direction: column;
+            }
+    
+            .contact-buttons {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Elan Rubin</h1>
+    </header>
+
+    <div class="container">
+        <section class="about">
+            <div class="profile-img">
+                <img src="/images/final picture (2).png">
+            </div>
+            <div class="info">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, recusandae nobis! Unde, reiciendis quo
+                    nesciunt enim labore debitis hic pariatur ipsam quas voluptas! Facere necessitatibus sint nobis
+                    earum? Dignissimos, corporis?</p>
+            </div>
+        </section>
+
+        <section class="contact-buttons">
+            <form>
+                <button type="reset"
+                    onclick="window.open('https://drive.google.com/file/d/15ntVhl43TmPZKeQ-XaZF0SavWFhQcys2/view', '_blank')">
+                    My Email
+                </button>
+            </form>
+            <form>
+                <button type="reset"
+                    onclick="window.open('https://www.linkedin.com/in/elan-rubin/', '_blank')">
+                    My LinkedIn
+                </button>
+            </form>
+            <form>
+                <button type="reset"
+                    onclick="window.open('https://github.com/Elan-Rubin', '_blank')">
+                    My Github
+                </button>
+            </form>
+            <form>
+                <button type="reset"
+                    onclick="window.open('https://drive.google.com/file/d/15ntVhl43TmPZKeQ-XaZF0SavWFhQcys2/view', '_blank')">
+                    My Resume
+                </button>
+            </form>
+        </section>
+
+        <section class="portfolio">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/portfolio/screenshot_bird.png" alt="BirderBase">
+                    <div class="portfolio-item-info">
+                        <h3>BirderBase</h3>
+                        <p>Date: Spring 2024</p>
+                        <p>Tools: JS, HTML, CSS</p>
+                        <p>Description: Collaborated to develop a web app for bird identification and data
+                            visualization.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/screenshot_equity.png" alt="EdEquity">
+                    <div class="portfolio-item-info">
+                        <h3>EdEquity</h3>
+                        <p>Date: Spring 2024</p>
+                        <p>Tools: JS, HTML, CSS</p>
+                        <p>Description: Developed an interactive site for educational resources. Competed in the
+                            Advanced category at Philadelphia CodeFest.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/screenshot_munch.png" alt="Munch Match">
+                    <div class="portfolio-item-info">
+                        <h3>Munch Match</h3>
+                        <p>Date: 2024</p>
+                        <p>Tools: JS, HTML, CSS, Apps Script</p>
+                        <p>Description: Designed and developed an intelligent food finder that matches users' flavor
+                            preferences to a dish. Created for a 2-quarter-long Computing and Informatics class.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/screenshot_elanmakesgames.png" alt="ElanMakesGames">
+                    <div class="portfolio-item-info">
+                        <h3>ElanMakesGames</h3>
+                        <p>Date: 2020-Present</p>
+                        <p>Tools: C#, Unity, CSS</p>
+                        <p>Description: Worked to maintain 20+ personal projects and games developed by me and my
+                            friends. 50k+ lifetime users.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/screenshot_essay.png" alt="Extended Essay - Genetic Algorithms">
+                    <div class="portfolio-item-info">
+                        <h3>Extended Essay - Genetic Algorithms</h3>
+                        <p>Date: 2022</p>
+                        <p>Tools: C#, Google Sheets, Apps Script</p>
+                        <p>Description: Wrote a 50-page scientific paper on genetic algorithms and the Travelling
+                            Salesman Problem to complete the International Baccalaureate Diploma.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/screenshot_sandwich.png" alt="Sandwich Stacker">
+                    <div class="portfolio-item-info">
+                        <h3>Sandwich Stacker</h3>
+                        <p>Date: 2023</p>
+                        <p>Tools: C#, Unity, Adobe Photoshop</p>
+                        <p>Description: Led the production and programming of a mobile/web game that has been played
+                            nearly 15k times.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/screenshot_inventory.png" alt="Inventory Management App">
+                    <div class="portfolio-item-info">
+                        <h3>Inventory Management App</h3>
+                        <p>Date: 2021</p>
+                        <p>Tools: Java, NetBeans, Adobe Illustrator</p>
+                        <p>Description: Followed client advisory, creating a desktop GUI for small business inventory
+                            management.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/screenshot_abortion.png" alt="Social Justice Hackathon 2023">
+                    <div class="portfolio-item-info">
+                        <h3>Social Justice Hackathon 2023</h3>
+                        <p>Date: 2023</p>
+                        <p>Tools: JavaScript, HTML, CSS</p>
+                        <p>Description: Consulted experts and followed client instructions to deploy an informational
+                            site centered around healthcare for teens.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+
+</html>
