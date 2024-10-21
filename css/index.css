@@ -64,7 +64,7 @@ html {
   width:20rem;
 }
 
-.slideshow-content{
+.slideshow-content {
   width: 20rem;
   height: 20rem;
   padding: 0 !important; 
@@ -110,6 +110,10 @@ html {
   border-radius: 50%;
 }
 
+.window-button:hover {
+  transform: scale(1.1);
+}
+
 .minimize-btn {
   background-color: var(--color-green);
 }
@@ -137,7 +141,7 @@ html {
 }
 
 .playlist-window{
-  width: 20rem;
+  width: 22.5rem;
 }
 
 .notepad .window-content {
@@ -181,11 +185,11 @@ html {
   /* font-family: Atkinson Hyperlegible, sans-serif; */
   font-family: Orbitron, sans-serif;
   width: 100%;
-  height: 40px;
-  margin-bottom: 10px;
+  height: 2rem;
+  margin-bottom: .5rem;
   text-align: right;
-  font-size: 20px;
-  padding: 5px;
+  font-size: rem;
+  padding: .5rem;
   box-sizing: border-box;
   background-color: #c6ddb3;
   border: none;
@@ -272,22 +276,18 @@ html {
 /* Slider container */
 .slider {
   display: flex;
-  /* Use flexbox layout to align images */
   width: 100%;
-  /* Slider takes up the full width of the slider-wrapper */
+  height: 100%;  /* Fill full height */
   transition: transform 1s ease;
-  /* Animation for transform changes */
 }
 
-/* Styling for each image in the slider */
 .slider img {
   flex: 0 0 100%;
-  /* Each image takes up 100% of the slider width */
   width: 100%;
-  /* Set image width to 100% */
-  /* object-fit: cover; */
-  object-fit: contain;
-  /* Images will cover the slider area, maintaining aspect ratio */
+  height: 100%;  /* Fill full height */
+  object-fit: cover;  /* Change from contain to cover */
+  margin: 0;  /* Remove any margins */
+  display: block;  /* Remove any default image spacing */
 }
 
 /* Navigation dots container */
@@ -313,9 +313,10 @@ html {
   width: 1rem;
   /* Size of each dot */
   height: 1rem;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   /* Make dots circular */
-  background-color: #fff;
+  /* background-color: #fff; */
+  color: white;
   /* White color for dots */
   opacity: 0.75;
   /* Slightly transparent dots */
@@ -329,37 +330,6 @@ html {
   cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),
     auto;
   /* Fully opaque on hover */
-}
-
-/* Responsive design adjustments */
-@media (max-width: 900px) {
-  .slider-wrapper {
-    width: 90%;
-    /* Set width to 90% for medium screens */
-  }
-}
-
-@media (max-width: 600px) {
-  .slider-wrapper {
-    width: 100%;
-    /* Set width to 100% for small screens */
-  }
-
-  .slider {
-    aspect-ratio: 4 / 3;
-    /* Change aspect ratio for small screens */
-  }
-
-  .slider-nav {
-    bottom: 0.5rem;
-    /* Reduce space from the bottom on small screens */
-  }
-
-  .slider-nav a {
-    width: 0.4rem;
-    /* Smaller dots for small screens */
-    height: 0.4rem;
-  }
 }
 
 /* style for app icons  */
@@ -384,10 +354,6 @@ html {
     auto;
 }
 
-.app-icon:hover {
-  transform: scale(1.05);
-}
-
 .app-icon i {
   border: 3px black solid;
   font-size: 2.5rem;
@@ -401,6 +367,14 @@ html {
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
+.app-icon:hover {
+  transform: scale(1.05);
+}
+
+.app-icon:hover i{
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
 .app-icon span {
   margin-top: 0.5rem;
   font-size: 1rem;
@@ -409,6 +383,10 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.app-icon:hover span {
+  text-decoration: underline;
 }
 
 #taskBar {

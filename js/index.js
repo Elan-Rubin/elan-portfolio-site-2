@@ -69,13 +69,15 @@ function setupWindowControls(window) {
         this.style.animation = 'bounce 0.3s';
         setTimeout(() => this.style.animation = '', 300);
 
-        if (content.style.display === 'none') {
-            content.style.display = 'block';
-            window.style.height = 'auto';
-        } else {
-            content.style.display = 'none';
-            window.style.height = 'calc(.75rem*2+12px)';
-        }
+        // if (content.style.display === 'none') {
+        //     content.style.display = 'block';
+        //     window.style.height = 'auto';
+        // } else {
+        //     content.style.display = 'none';
+        //     window.style.height = 'calc(.75rem*2+12px)';
+        // }
+
+        // this wasnt working, so i guess it's not needed
     });
 
     maximizeBtn.addEventListener('click', function () {

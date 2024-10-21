@@ -18,9 +18,11 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/x-icon" href="/images/star_favicon.png">
 
-    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/musicplayer.css">
     <script src="/js/index.js"></script>
+    <link rel="stylesheet" href="/css/paint.css">
+    
+    <link rel="stylesheet" href="/css/index.css">
 
 </head>
 
@@ -62,7 +64,7 @@
                 <span>Instagram</span>
             </a>
         </div>
-        <div class="window" style="top: 20px; left: 20px;">
+        <div class="window" style="top: 1rem; left: 1rem;">
             <div class="window-header">
                 <div class="window-title">Slideshow</div>
                 <div class="window-controls">
@@ -93,7 +95,7 @@
             </div>
         </div>
 
-        <div class="window" style="top: 100px; left: 100px;">
+        <div class="window" style="top: calc(100vh - 20rem - .5rem); left: calc(100vw - 39.5rem);">
             <div class="window-header">
                 <div class="window-title">Calculator</div>
                 <div class="window-controls">
@@ -130,7 +132,7 @@
             </div>
         </div>
 
-        <div class="window notepad" style="top: 50px; left: 400px;">
+        <div class="window notepad" style="top: 1rem; left: 22rem;">
             <div class="window-header">
                 <div class="window-title">Notepad</div>
                 <div class="window-controls">
@@ -142,7 +144,39 @@
             <div class="window-content" id="notepadContent"></div>
         </div>
 
-        <div class="window playlist-window" style="top: 200px; left: 200px;">
+        <!-- <div class="window" style="top: 1rem; left: 22rem;">
+            <div class="window-header">
+                <div class="window-title">Paint</div>
+                <div class="window-controls">
+                    <button class="window-button minimize-btn"></button>
+                    <button class="window-button maximize-btn"></button>
+                    <button class="window-button close-btn"></button>
+                </div>
+            </div>
+            <div class="drawing-container">
+                <div class="color-palette">
+                    <div class="color-option" style="background: red;" data-color="red"></div>
+                    <div class="color-option" style="background: yellow;" data-color="yellow"></div>
+                    <div class="color-option" style="background: green;" data-color="green"></div>
+                    <div class="color-option" style="background: blue;" data-color="blue"></div>
+                    <div class="color-option" style="background: black;" data-color="black"></div>
+                    <div class="color-option" style="background: white;" data-color="white"></div>
+                    <button class="clear-btn">Clear</button>
+                </div>
+                <div class="brush-control">
+                    <label>Brush Size:</label>
+                    <input type="range" id="brushSlider" min="1" max="50" value="3">
+                    <span id="brushSize">3px</span>
+                </div>
+                <div class="canvas-wrapper">
+                    <canvas id="drawingCanvas" height="300"></canvas>
+                </div>
+            </div>
+        </div> -->
+
+        <script src="/js/paint.js"></script>
+
+        <div class="window playlist-window" style="top: calc(100vh - 20rem - .5rem); left: calc(100vw - 20rem - 3.5rem);">
             <div class="window-header">
                 <div class="window-title">Playlist</div>
                 <div class="window-controls">
