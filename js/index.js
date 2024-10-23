@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const slider = document.querySelector('.slider'); // Select the slider container
     const slides = document.querySelectorAll('.slider img'); // Select all slides (images)
     const slideCount = slides.length; // Number of slides
-    const interval = 3000; // Time for each slide transition in milliseconds (3 seconds)
+    const interval = 3500; // Time for each slide transition in milliseconds (3 seconds)
 
     let currentIndex = 0; // Index of the current slide
     let startX = 0; // Starting x coordinate for touch

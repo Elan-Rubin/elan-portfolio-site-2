@@ -292,6 +292,7 @@ html {
 
 /* Navigation dots container */
 .slider-nav {
+  
   display: flex;
   /* Align dots horizontally */
   column-gap: 0.5rem;
@@ -306,6 +307,7 @@ html {
   /* Center the dots container */
   z-index: 1;
   /* Ensure navigation dots are above other content */
+  display: none;
 }
 
 /* Styling for each navigation dot */
