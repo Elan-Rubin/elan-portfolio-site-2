@@ -21,9 +21,21 @@
     <link rel="stylesheet" href="/css/musicplayer.css">
     <script src="/js/index.js"></script>
     <link rel="stylesheet" href="/css/paint.css">
-    
-    <link rel="stylesheet" href="/css/index.css">
 
+    <link rel="stylesheet" href="/css/index.css">
+    <script>
+        //detect if not on the computer, and then redirect
+        function detectMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        function redirectIfMobile() {
+            if (detectMobile()) {
+                window.location.href = "mobile-index.html";
+            }
+        }
+        window.onload = redirectIfMobile;
+    </script>
 </head>
 
 <body>
@@ -38,8 +50,8 @@
                 <span>GitHub</span>
             </a>
             <div></div>
-            <a href="https://drive.google.com/file/d/1giRqr5pn-xtnSsRw4jl0ixq1BNg31qH1/view?usp=sharing" class="app-icon"
-                target="_blank">
+            <a href="https://drive.google.com/file/d/1giRqr5pn-xtnSsRw4jl0ixq1BNg31qH1/view?usp=sharing"
+                class="app-icon" target="_blank">
                 <i class="fa-solid fa-file" style="background-color: #E20001;"></i>
                 <!-- <i class="fas fa-file-pdf" style="background-color: var(--color-blue);"></i> -->
                 <span>Resume</span>
@@ -176,7 +188,8 @@
 
         <script src="/js/paint.js"></script>
 
-        <div class="window playlist-window" style="top: calc(100vh - 20rem - .5rem); left: calc(100vw - 20rem - 3.5rem);">
+        <div class="window playlist-window"
+            style="top: calc(100vh - 20rem - .5rem); left: calc(100vw - 20rem - 3.5rem);">
             <div class="window-header">
                 <div class="window-title">Playlist</div>
                 <div class="window-controls">

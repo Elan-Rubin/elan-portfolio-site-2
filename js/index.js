@@ -1,15 +1,3 @@
-//detect if not on the computer, and then redirect
-function detectMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
-function redirectIfMobile() {
-    if (detectMobile()) {
-        window.location.href = "mobile-index.html";
-    }
-}
-window.onload = redirectIfMobile;
-
 //
 
 let zIndex = 1;
