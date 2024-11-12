@@ -4,35 +4,56 @@ Copyright:WowThemes.net,https://www.wowthemes.net
 Version:1.0.1
 License: https://www.wowthemes.net/freebies-license/
 */
+
+:root {
+  --color-trans10: rgba(0, 0, 0, 0.1);
+  --color-trans15: rgba(0, 0, 0, 0.15);
+  --color-trans50: rgba(0, 0, 0, 0.5);
+
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #252525;
+  --text-primary: var(--color-white);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --accent-color: var(--color-teal);
+  --link-color: var(--color-light-purple);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+* {
+  font-family: Atkinson Hyperlegible, sans-serif;
+}
 body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   padding-top: 5rem;
 }
 .mainheading {
   padding: 1rem 0rem;
 }
 a {
-  color: #00ab6b;
+  color: var(--link-color);
 }
 a,
 a:hover {
   transition: all 0.2s;
 }
 .mediumnavigation {
-  background: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
+  background-color: var(--bg-primary);
+  /* opacity: 0.7; */
+  /* background: rgba(255, 255, 255, 0.97); */
+  box-shadow: 0 2px 2px -2px var(--color-trans15);
 }
 section {
   margin-bottom: 20px;
 }
 .section-title h2 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid var(--color-trans15);
   margin-bottom: 25px;
   font-weight: 700;
   font-size: 1.4rem;
   margin-bottom: 27px;
 }
 .section-title span {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+  border-bottom: 1px solid var(--color-trans50);
   display: inline-block;
   padding-bottom: 20px;
   margin-bottom: -1px;
@@ -58,7 +79,7 @@ section {
   flex: 0 0 auto;
 }
 .listfeaturedtag .card {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-trans10);
   border-radius: 2px;
   height: 260px;
   padding-left: 0;
@@ -92,7 +113,7 @@ section {
 }
 .listfeaturedtag h4.card-text,
 .listrecent h4.card-text {
-  color: rgba(0, 0, 0, 0.44);
+  color: var(--color-trans50);
   font-size: 0.95rem;
   line-height: 1.4;
   font-weight: 400;
@@ -114,6 +135,7 @@ section {
   float: left;
   margin-right: 13px;
   border-radius: 100%;
+  object-fit: cover;
 }
 .post-top-meta {
   margin-bottom: 2rem;
@@ -127,7 +149,7 @@ section {
 }
 .post-top-meta span {
   font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.44);
+  color: var(--color-trans50);
   display: inline-block;
 }
 .post-top-meta .author-description {
@@ -148,7 +170,7 @@ span.author-meta {
 }
 span.post-date,
 span.post-read {
-  color: rgba(0, 0, 0, 0.44);
+  color: var(--color-trans50);
 }
 span.post-read-more {
   align-items: center;
@@ -157,11 +179,11 @@ span.post-read-more {
   margin-top: 8px;
 }
 span.post-read-more a {
-  color: rgba(0, 0, 0, 0.44);
+  color: var(--color-trans50);
 }
 span.post-name a,
 span.post-read-more a:hover {
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--color-trans50);
 }
 .dot:after {
   content: "·";
@@ -172,7 +194,7 @@ span.post-read-more a:hover {
   font-size: 0.8rem;
   border-radius: 30px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--color-trans10);
 }
 .mediumnavigation .form-inline {
   margin-left: 15px;
@@ -186,13 +208,13 @@ span.post-read-more a:hover {
 .mediumnavigation .form-inline .btn:hover,
 .mediumnavigation .form-inline .btn:active {
   background: transparent;
-  color: green;
+  color: var(--accent-color);
 }
 .mediumnavigation .navbar-brand {
   font-weight: 500;
 }
 .mediumnavigation .dropdown-menu {
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-trans10);
   margin: 0.5rem 0 0;
 }
 .mediumnavigation .nav-item,
@@ -210,14 +232,14 @@ span.post-read-more a:hover {
   margin-right: 5px;
 }
 .mainheading h1.sitetitle {
-  font-family: Righteous;
+  font-family: Atkinson Hyperlegible, sans-serif;
 }
 .mainheading h1.posttitle {
   font-weight: 700;
   margin-bottom: 1rem;
 }
 .footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+  border-top: 1px solid var(--color-trans10) !important;
   padding-top: 15px;
   padding-bottom: 12px;
   font-size: 0.8rem;
@@ -228,16 +250,16 @@ span.post-read-more a:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 .article-post {
-  font-family: Merriweather;
+  font-family: Atkinson Hyperlegible, sans-serif;
   font-size: 1.2rem;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.8);
 }
 blockquote {
-  border-left: 4px solid #00ab6b;
+  border-left: 4px solid var(--accent-color);
   padding: 0 20px;
   font-style: italic;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--color-trans50);
 }
 .article-post p,
 .article-post blockquote {
@@ -315,16 +337,16 @@ blockquote {
 }
 .share,
 .share a {
-  color: rgba(0, 0, 0, 0.44);
-  fill: rgba(0, 0, 0, 0.44);
+  color: var(--color-trans50);
+  fill: var(--color-trans50);
 }
 .graybg {
-  background-color: #fafafa;
+  background-color: var(--bg-secondary);
   padding: 40px 0 46px;
   position: relative;
 }
 .listrelated .card {
-  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 7px var(--color-trans10);
   border: 0;
 }
 .card {
@@ -344,13 +366,13 @@ ul.tags li {
   font-size: 0.9rem;
 }
 ul.tags li a {
-  background: rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.6);
+  background: var(--color-trans10);
+  color: var(--color-trans50);
   border-radius: 3px;
   padding: 5px 10px;
 }
 ul.tags li a:hover {
-  background: rgba(0, 0, 0, 0.07);
+  background: var(--color-trans10);
   text-decoration: none;
 }
 .margtop3rem {
@@ -359,7 +381,7 @@ ul.tags li a:hover {
 .sep {
   height: 1px;
   width: 20px;
-  background: #999;
+  background: var(--border-color);
   margin: 0px auto;
   margin-bottom: 1.2rem;
 }
@@ -388,7 +410,7 @@ ul.tags li a:hover {
   margin-top: -4px;
 }
 .alertbar {
-  box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.0785);
+  box-shadow: 0 -3px 10px 0 var(--color-trans10);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -398,19 +420,19 @@ ul.tags li a:hover {
   z-index: 1;
 }
 .form-control::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--color-trans150);
 }
 .form-control:-moz-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--color-trans150);
 }
 .form-control::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--color-trans150);
 }
 .form-control:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--color-trans150);
 }
 .form-control::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--color-trans150);
 }
 .authorpage h1 {
   font-weight: 700;
@@ -421,7 +443,7 @@ ul.tags li a:hover {
 }
 .authorpage .author-description {
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--color-trans150);
 }
 .post-top-meta.authorpage .btn.follow {
   padding: 7px 20px;
