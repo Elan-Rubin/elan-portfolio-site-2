@@ -19,11 +19,13 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/x-icon" href="/images/star_favicon.png">
 
-    <link rel="stylesheet" href="/css/musicplayer.css">
     <script src="/js/index.js"></script>
-
+    
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="/css/musicplayer.css">
+    <link rel="stylesheet" href="/css/cookie.css">
+
     <script>
         //detect if not on the computer, and then redirect
         function detectMobile() {
@@ -188,37 +190,50 @@
             <div class="window-content" id="notepadContent"></div>
         </div>
 
-        <!-- <div class="window" style="top: 1rem; left: 22rem;">
+        <div class="window" style="top: calc(50vh - 15rem); left: calc(50vw - 20rem); width: 40rem; height: 30rem; display: none;">
             <div class="window-header">
-                <div class="window-title">Paint</div>
+                <div class="window-title">Clicker</div>
                 <div class="window-controls">
                     <button class="window-button minimize-btn"></button>
                     <button class="window-button maximize-btn"></button>
                     <button class="window-button close-btn"></button>
                 </div>
             </div>
-            <div class="drawing-container">
-                <div class="color-palette">
-                    <div class="color-option" style="background: red;" data-color="red"></div>
-                    <div class="color-option" style="background: yellow;" data-color="yellow"></div>
-                    <div class="color-option" style="background: green;" data-color="green"></div>
-                    <div class="color-option" style="background: blue;" data-color="blue"></div>
-                    <div class="color-option" style="background: black;" data-color="black"></div>
-                    <div class="color-option" style="background: white;" data-color="white"></div>
-                    <button class="clear-btn">Clear</button>
+            <div class="window-content cookie-game">
+                <div class="cookie-column">
+                    <div class="cookie-counter">
+                        <span id="cookieCount">0</span> cookies
+                    </div>
+                    <button class="cookie-button" id="cookieButton">
+                        <img src="images/cookie_pink.png" alt="">
+                        <!-- <i class="fas fa-cookie"></i> -->
+                    </button>
                 </div>
-                <div class="brush-control">
-                    <label>Brush Size:</label>
-                    <input type="range" id="brushSlider" min="1" max="50" value="3">
-                    <span id="brushSize">3px</span>
-                </div>
-                <div class="canvas-wrapper">
-                    <canvas id="drawingCanvas" height="300"></canvas>
+                <div class="upgrades-column">
+                    <div class="upgrade-item">
+                        <button class="upgrade-button" id="clickUpgrade">
+                            <div class="upgrade-info">
+                                <div class="upgrade-name">Better Clicking</div>
+                                <div class="upgrade-desc">Clicks worth +1 cookie</div>
+                                <div class="upgrade-cost">Cost: <span id="clickUpgradeCost">10</span> cookies</div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="upgrade-item">
+                        <button class="upgrade-button" id="autoUpgrade">
+                            <div class="upgrade-info">
+                                <div class="upgrade-name">Auto Cookie</div>
+                                <div class="upgrade-desc">Generate 1 cookie/sec</div>
+                                <div class="upgrade-cost">Cost: <span id="autoUpgradeCost">15</span> cookies</div>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <!-- <script src="/js/paint.js"></script> -->
+        <!-- <link rel="stylesheet" href="/js/cookie.js"> -->
+        <script src="/js/cookie.js"></script>
 
         <div class="window playlist-window"
             style="top: calc(100vh - 20rem - .5rem); left: calc(100vw - 20rem - 3.5rem);">
@@ -239,8 +254,7 @@
                         <!-- clairo - juna -->
                         <div class="playlist-item" data-src="/music/clairo.mp3">Clairo - Juna</div>
                         <div class="playlist-item" data-src="/music/jamie.mp3">Jamie xx - Life</div>
-                        <div class="playlist-item" data-src="/music/winans.mp3">The Winans - Ain't no Need to Worry
-                        </div>
+                        <div class="playlist-item" data-src="/music/winans.mp3">The Winans - Ain't no Need to Worry</div>
                         <div class="playlist-item" data-src="/music/lexa.mp3">Lexa Gates - I Just can't be Alone</div>
                     </div>
                     <div class="controls">

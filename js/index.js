@@ -223,46 +223,9 @@ let windowStates = {
     'Slideshow': true,
     'Calculator': true,
     'Notepad': true,
-    'Playlist': true
+    'Playlist': true,
+    'Clicker' : false,
 };
-
-function createTerminal() {
-    // const terminal = document.createElement('div');
-    // terminal.className = 'window terminal';
-    // terminal.style.position = 'fixed';
-    // terminal.style.top = '1rem';
-    // terminal.style.left = '1rem';
-    // terminal.style.width = '15rem';
-    // terminal.style.zIndex = '1000';
-
-    // terminal.innerHTML = `
-    //     <div class="window-header">
-    //         <div class="window-title">Terminal</div>
-    //     </div>
-    //     <div class="window-content terminal-content">
-    //         <ul class="terminal-list">
-    //             ${Object.keys(windowStates).map(name => 
-    //                 `<li class="terminal-item">
-    //                     <span class="status-dot ${windowStates[name] ? 'active' : ''}"></span>
-    //                     ${name}
-    //                 </li>`
-    //             ).join('')}
-    //         </ul>
-    //     </div>
-    // `;
-
-    // document.getElementById('desktopSection').appendChild(terminal);
-    // dragElement(terminal);
-
-    // // Add click handlers for terminal items
-    // const items = terminal.querySelectorAll('.terminal-item');
-    // items.forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         const windowName = item.textContent.trim();
-    //         toggleWindow(windowName);
-    //     });
-    // });
-}
 
 function toggleWindow(windowName) {
     const windowElement = findWindowByTitle(windowName);
